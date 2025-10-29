@@ -1,0 +1,95 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;.waste-quote-container {
+  max-width: 520px;
+  margin: 40px auto 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 18px #e2e8f0;
+  padding: 28px 28px 16px 28px;
+}
+.waste-quote-container h2 {
+  text-align: center;
+  margin-bottom: 18px;
+  font-weight: 600;
+  color: #19593c;
+}
+.type-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.type-toggle button {
+  padding: 8px 16px;
+  border: 1.5px solid #4a5568;
+  background: #f7fafc;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.type-toggle .selected {
+  background: #19593c;
+  color: #fff;
+  border-color: #19593c;
+}
+.quote-form input[type="text"],
+.quote-form input[type="email"],
+.quote-form input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin: 7px 0;
+  border: 1px solid #ccd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.quote-form .row {
+  display: flex;
+  gap: 12px;
+}
+.quote-form .terms {
+  font-size: .97rem;
+  margin: 12px 0 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.quote-form .submit-btn {
+  width: 100%;
+  background: #228c41;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-weight: 600;
+  font-size: 1.07rem;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+.quote-form .submit-btn:disabled {
+  background: #97af9f;
+  cursor: not-allowed;
+}
+.customer-service {
+  text-align: center;
+  margin-top: 8px;
+}
+.cs-btn {
+  background: #f7fafc;
+  color: #228c41;
+  border: 1px solid #228c41;
+  border-radius: 8px;
+  padding: 5px 18px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 6px;
+}
+.footer {
+  margin-top: 40px;
+  padding: 20px 0;
+  text-align: center;
+  background: #19593c;
+  color: #fff;
+  font-size: 1.02rem;
+}
