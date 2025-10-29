@@ -14,6 +14,7 @@ import TrackStatus from "./pages/TrackStatus.jsx";
 import AuthSuccess from "./pages/AuthSuccess";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Services from "./pages/Services";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
@@ -52,6 +53,8 @@ function App() {
       return <AuthSuccess onNavigate={navigate} />;
     case "trackStatus": // 👈 ADD THIS
       return <TrackStatus onNavigate={navigate} />;
+    case "services":
+      return <Services onNavigate={navigate} />;
     case "about":
       return <About onNavigate={navigate} />;
     case "contact":

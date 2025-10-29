@@ -453,8 +453,8 @@ function Home({ onNavigate }) {
           <span style={styles.navLink} onClick={() => onNavigate('services')}>{t('services')}</span>
           <span style={styles.navLink} onClick={() => onNavigate('about')}>{t('about')}</span>
           <span style={styles.navLink} onClick={() => onNavigate('contact')}>{t('contact')}</span>
-          <button style={{...styles.secondaryBtn, padding: '8px 20px', fontSize: '0.9rem'}} onClick={() => onNavigate('businessUserDashboardTest')}>
-            For Business
+          <button style={{...styles.secondaryBtn, padding: '8px 20px', fontSize: '0.9rem'}} onClick={() => onNavigate('adminLogin')}>
+            Admin Login
           </button>
           <button style={styles.loginButton} onClick={() => onNavigate('userLogin')}>
             {t('my_account')}
@@ -488,11 +488,16 @@ function Home({ onNavigate }) {
           </div>
           <div style={styles.serviceIcons}>
             {services.map((service, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 style={styles.serviceIcon}
                 onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
                 onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+                onClick={() => {
+                  if (service.title === 'Pickup Schedulle') {
+                    onNavigate('userLogin');
+                  }
+                }}
               >
                 <div style={{ fontSize: '2rem' }}>{service.icon}</div>
                 <div style={{ fontSize: '0.8rem', fontWeight: '600', marginTop: '8px' }}>
